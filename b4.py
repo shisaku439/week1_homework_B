@@ -19,10 +19,8 @@ def main():
     print(result)
 
     # Q2. 大阪府のすべての駅名をカンマ区切りで出力してください( '梅田,大阪,堺' となればOK)
-    for info in weather_information:
-        if "大阪府" in info.values():
-            print(info["station"], end=",")
-    print()
+    result = [info["station"] for info in weather_information if info["prefecture"] == "大阪府"]
+    print(",".join(result))
 
     # Q3. 福岡県の平均気温を計算してください(14.0となればOK)
     total = 0

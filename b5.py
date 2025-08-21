@@ -34,11 +34,7 @@ def get_min(list):
 
 # 平均値算出関数
 def get_ave(list):
-    count = 0
-    for value in list:
-        count += 1
-
-    return get_sum(list) // count
+    return get_sum(list) // len(list)
 
 
 # 出力
